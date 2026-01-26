@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    background:linear-gradient(to bottom, #fff0f5, #ffffff);
+    font-family:'Quicksand', sans-serif;
+}
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+}
+h1{color:#ff4d79;}
+.gallery img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:5px;
+}
+.message{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d79;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+.countdown{
+    font-size:18px;
+    margin-top:20px;
+    color:#ff4d79;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Love 💕</h1>
+
+    <div class="gallery">
+        <!-- Replace image1.jpg etc with your images -->
+        <img src="image1.jpg">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+    </div>
+
+    <div class="message">
+        <p>
+        From the day you came into my life,<br>
+        everything feels warmer and happier.<br><br>
+
+        You are my comfort, my smile,<br>
+        my safe place.<br><br>
+
+        Thank you for being you.<br>
+        Will you be my Valentine? 💘
+        </p>
+    </div>
+
+    <button onclick="alert('I LOVE YOU ❤️')">Tap if you love me 💕</button>
+
+    <div class="countdown" id="timer"></div>
+
+    <p style="margin-top:20px;">I love you more than words can ever say ❤️</p>
+</div>
+
+<script>
+// Countdown to Feb 14
+const valentine = new Date("Feb 14, 2026 00:00:00").getTime();
+const timer = document.getElementById("timer");
+
+setInterval(()=>{
+    const now = new Date().getTime();
+    const diff = valentine - now;
+
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const s = Math.floor((diff % (1000*60)) / 1000);
+
+    timer.innerHTML = `Counting every second till Valentine’s Day 💝<br>
+    ${d} Days ${h} Hours ${m} Minutes ${s} Seconds`;
+},1000);
+</script>
+
+</body>
+</html>
