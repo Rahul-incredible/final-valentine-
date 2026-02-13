@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -70,9 +71,6 @@
     Tum ho toh sab kuch thoda easy lagta hai.  
     Tum ho toh silence bhi loud lagta hai.  
     Fakira sa ho jaata hoon jab tum saamne hoti ho 💗
-    tum mera wo pal ho jise main kabhi nhi bhulna chahta
-    mana tum galtiyan karti ho lakin jaisi bhi ho
-    tum sirf meri ho 'i love you'🫶🏻
   </p>
   <button onclick="nextPage()">Next ➜</button>
 </div>
@@ -100,14 +98,22 @@
 <div class="page hidden" id="page5">
   <h1>One Last Thing 🥹❤️</h1>
   <p>
-    Agar main kartik hoon…  
-    toh tum meri naira ho.  
-    main chahun kitna bhi laad lu 
-     lekin main tumhare bina nhi reh 
-     sakta **Rasmalai** 😭💖
+      Agar main kartik hoon…  
+      toh tum meri naira ho.  
+      main chahun kitna bhi laad lu 
+      lekin main tumhare bina nhi reh 
+      sakta **Rasmalai** 😭💖
   </p>
-   <button onclick="page3.html">Yes, show me ❤️</button>
 </div>
+
+<script>
+  let current = 1;
+  function nextPage() {
+    document.getElementById("page" + current).classList.add("hidden");
+    current++;
+    document.getElementById("page" + current).classList.remove("hidden");
+  }
+</script>
 
 </body>
 </html>
